@@ -1,2 +1,2 @@
-# fiat-lux
-We aim to create a text classifier that is able to accurately categorize political points of view within an article.
+# Fiat-Lux
+The Latin phrase "fiat lux" translates to "let there be light." In our increasingly digitized world, we must be wary about the news sources from which we consume information. As such, we aim to bring light to the underlying political advocacy and messaging within the news articles we read everyday. We aim to create a text classifier that is able to accurately categorize political points of view within an article. 
