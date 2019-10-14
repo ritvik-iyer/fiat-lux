@@ -1,1 +1,1 @@
-*.csv
+cleaned_news.csv
