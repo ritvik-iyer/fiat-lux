@@ -6,6 +6,7 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import SGDClassifier
 import warnings
+
 warnings.filterwarnings("ignore")
 
 
@@ -55,18 +56,20 @@ def get_length(text):
     words = text.split(' ')
     return len(words)
 
-def generate_prediction(classifier, vectorizer, input_data):
+def generate_prediction(classifier, vectorizer, filename):
     """Generates one prediction for a given text input using trained classifier and fitted tf-idf vectorizer"""
-    cleaned = preprocess(input_data)
+    with open(filename, 'r', encoding="utf8", errors='ignore') as file:
+        data = file.read().replace('\n', '')
+    cleaned = preprocess(data)
     word_vector = vectorizer.transform([cleaned])
     return classifier.predict(word_vector)[0]
 
 if __name__ == '__main__':
     classifier, vectorizer, encoding_map = train_model()
-    user_input = input('Enter the text of an article from one of the following outlets: {} \n'.format(', '.join(list(encoding_map.values()))))
+    filename = input('Enter the name of the .txt file containing the article you want to classify. It must be from one of the following outlets: {} \n'.format(', '.join(list(encoding_map.values()))))
     try:
-        prediction = generate_prediction(classifier, vectorizer, user_input)
-        print('The classifier predicts that this article was published by {}'.format(encoding_map.get(prediction)))
+        prediction = generate_prediction(classifier, vectorizer, filename)
+        print('The classifier predicts that this article was published by {}.'.format(encoding_map.get(prediction)))
     except Exception as e:
         print('Encountered an error. Please make sure your input is formatted correctly.')
         exit()
