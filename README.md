@@ -12,3 +12,6 @@ We worked on text cleaning and transforming our text. We decided to use the td-i
 
 ### 12/2
 We created several text classifiers and ran it on our data. We also created an interactive program to dynamically test our text classifier. 
+
+### 12/14
+Our final research paper summarizing our methodology and conclusions is available [here](https://drive.google.com/file/d/1LHyxv8Y6i90n6bfD-k5HI-Mm2p73wabx/view?usp=sharing). Thanks for reading!
