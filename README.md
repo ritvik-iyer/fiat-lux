@@ -9,12 +9,12 @@ We have built and tested several text classifiers trained on data from [FakeNews
 The classifier and other relevant scripts are implemented in python 3.6.
 
 ## Dependencies
--pandas
--nltk (Natural Language Toolkit)
--regex
--numpy 
--sklearn 
--pickle 
+* pandas
+* nltk (Natural Language Toolkit)
+* regex
+* numpy 
+* sklearn 
+* pickle 
 
 ## Usage
 To run our text classifier on an article of your choice:
