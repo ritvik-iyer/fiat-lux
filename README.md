@@ -22,5 +22,5 @@ To run our text classifier on an article of your choice:
  >>> python interactive.py 
     
 You will be prompted to enter the name of a .txt file which contains the text of the article you want to classify. Please enter and save the text of the article you want to classify into a .txt file within the same folder as the interactive.py script. Then, when prompted, enter:
-  >>> <filename>.txt
+  >>> (filename).txt
   
